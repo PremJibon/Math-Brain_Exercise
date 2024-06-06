@@ -9,20 +9,27 @@
 body {
     font-family: 'Luckiest Guy', cursive;
     background-color: #e6e6ea;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
 }
 
 .container {
     padding: 20px;
-    overflow: hidden;
     background-color: #fe4a49;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .container h1 {
     color: white;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .container ul {
@@ -31,10 +38,11 @@ body {
     display: flex;
     justify-content: center;
     padding: 0;
+    flex-wrap: wrap;
 }
 
 .container li {
-    margin: 0 10px;
+    margin: 10px;
 }
 
 .container a {
@@ -58,11 +66,12 @@ body {
 }
 
 .equation {
-    font-size: 48px;
+    font-size: 8vw;
     background-color: white;
     border-radius: 3px;
     text-align: center;
     padding: 20px;
+    margin-bottom: 10px;
 }
 
 .equation h1 {
@@ -70,7 +79,7 @@ body {
 }
 
 .answer-options {
-    font-size: 48px;
+    font-size: 8vw;
 }
 
 .answer-options h1 {
@@ -80,7 +89,7 @@ body {
     text-align: center;
     padding: 20px;
     margin: 10px 0;
-    transition: background-color 1s, color 1s;
+    transition: background-color 0.5s, color 0.5s;
 }
 
 #option1 {
@@ -117,11 +126,11 @@ body {
     }
 
     .equation {
-        font-size: 65px;
+        font-size: 5vw;
     }
 
     .answer-options {
-        font-size: 67px;
+        font-size: 5vw;
     }
 }
 
@@ -131,15 +140,11 @@ body {
         align-items: center;
     }
 
-    .container li {
-        margin-top: 10px;
-    }
-
     .equation {
-        font-size: 36px;
+        font-size: 10vw;
     }
 
     .answer-options {
-        font-size: 36px;
+        font-size: 10vw;
     }
 }
