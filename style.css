@@ -15,7 +15,7 @@ body {
     justify-content: center;
     min-height: 100vh;
     padding: 20px;
-    overflow-y:hidden;
+    overflow: hidden; /* Prevent scrolling */
 }
 
 .container {
@@ -25,6 +25,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    overflow: hidden; /* Prevent scrolling within the container */
 }
 
 .container h1 {
@@ -40,6 +41,7 @@ body {
     justify-content: center;
     padding: 0;
     flex-wrap: wrap;
+    overflow: hidden; /* Prevent scrolling within the list */
 }
 
 .container li {
@@ -64,6 +66,7 @@ body {
     gap: 10px;
     width: 100%;
     padding: 10px;
+    overflow: hidden; /* Prevent scrolling within the wrapper */
 }
 
 .equation {
