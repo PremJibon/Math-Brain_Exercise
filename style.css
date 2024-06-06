@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Fredoka&family=Kablammo&family=Luckiest+Guy&family=Noto+Sans+JP&family=Roboto:ital@0;1&family=Tektur&family=Vina+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Fredoka&family=Kablammo&family=Luckiest+Guy&family=Noto+Sans+JP&family=Roboto:wght@400;700&family=Tektur&family=Vina+Sans&display=swap');
 
 * {
     padding: 0;
@@ -15,8 +15,8 @@ body {
     justify-content: center;
     min-height: 100vh;
     padding: 20px;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    overflow-y: hidden; /* Prevent vertical scrolling */
+    overflow-x: hidden;
+    overflow-y: auto; /* Allow vertical scrolling */
 }
 
 .container {
@@ -27,6 +27,7 @@ body {
     align-items: center;
     width: 100%;
     box-sizing: border-box;
+    max-width: 800px; /* Limit the container width */
 }
 
 .container h1 {
@@ -37,7 +38,7 @@ body {
 
 .container ul {
     list-style-type: none;
-    font-size: 20px;
+    font-size: 1.25em; /* Using em for responsive scaling */
     display: flex;
     justify-content: center;
     padding: 0;
@@ -53,12 +54,18 @@ body {
 .container a {
     text-decoration: none;
     color: #e6e6ea;
+    transition: color 0.3s;
+}
+
+.container a:hover {
+    color: #ffffff; /* Highlight links on hover */
+    text-decoration: underline;
 }
 
 .current a::after {
     content: "_";
     background-color: white;
-    font-size: 4px;
+    font-size: 1em; /* Scaled for better visibility */
     display: block;
 }
 
@@ -68,6 +75,7 @@ body {
     gap: 10px;
     width: 100%;
     padding: 10px;
+    box-sizing: border-box;
 }
 
 .equation {
@@ -78,4 +86,27 @@ body {
     padding: 20px;
     margin-bottom: 10px;
     width: 100%;
-    box-sizing: border
+    box-sizing: border-box;
+    max-width: 500px; /* Limit max width for readability */
+}
+
+/* Media Queries for responsive design */
+@media (min-width: 600px) {
+    .wrapper {
+        grid-template-columns: 1fr 1fr; /* Two columns layout for larger screens */
+    }
+
+    .equation {
+        font-size: 6vw; /* Adjust font size for larger screens */
+    }
+}
+
+@media (min-width: 900px) {
+    .container {
+        max-width: 1200px; /* Larger max width for very large screens */
+    }
+
+    .equation {
+        font-size: 4vw; /* Further adjust for readability */
+    }
+}
