@@ -15,17 +15,18 @@ body {
     justify-content: center;
     min-height: 100vh;
     padding: 20px;
-    overflow: hidden; /* Prevent scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-y: hidden; /* Prevent vertical scrolling */
 }
 
 .container {
-    padding: 20px;
     background-color: #fe4a49;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    overflow: hidden; /* Prevent scrolling within the container */
+    box-sizing: border-box;
 }
 
 .container h1 {
@@ -41,7 +42,8 @@ body {
     justify-content: center;
     padding: 0;
     flex-wrap: wrap;
-    overflow: hidden; /* Prevent scrolling within the list */
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .container li {
@@ -66,7 +68,6 @@ body {
     gap: 10px;
     width: 100%;
     padding: 10px;
-    overflow: hidden; /* Prevent scrolling within the wrapper */
 }
 
 .equation {
@@ -76,79 +77,5 @@ body {
     text-align: center;
     padding: 20px;
     margin-bottom: 10px;
-}
-
-.equation h1 {
-    display: inline;
-}
-
-.answer-options {
-    font-size: 8vw;
-}
-
-.answer-options h1 {
-    cursor: pointer;
-    color: whitesmoke;
-    border-radius: 3px;
-    text-align: center;
-    padding: 20px;
-    margin: 10px 0;
-    transition: background-color 0.5s, color 0.5s;
-}
-
-#option1 {
-    background-color: #fe4a49;
-}
-
-#option1:hover {
-    color: #fe4a49;
-    background-color: white;
-}
-
-#option2 {
-    background-color: #b828b83b;
-}
-
-#option2:hover {
-    color: #1c60df;
-    background-color: white;
-}
-
-#option3 {
-    background-color: #1c5ca7;
-}
-
-#option3:hover {
-    color: #caeb39;
-    background-color: white;
-}
-
-/* Media Queries for Responsiveness */
-@media (min-width: 600px) {
-    .wrapper {
-        grid-template-columns: 82% 18%;
-    }
-
-    .equation {
-        font-size: 5vw;
-    }
-
-    .answer-options {
-        font-size: 5vw;
-    }
-}
-
-@media (max-width: 599px) {
-    .container ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .equation {
-        font-size: 10vw;
-    }
-
-    .answer-options {
-        font-size: 10vw;
-    }
-}
+    width: 100%;
+    box-sizing: border
